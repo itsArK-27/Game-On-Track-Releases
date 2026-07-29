@@ -15,6 +15,3 @@ A powerful, AI-driven application designed to help you track your game battle pa
 ## 🚀 Live Deployment
 
 Check out the live application here: **[Insert Your Deployment Link Here]**
-
-## 📸 Screenshots
-*(Coming soon!)*
