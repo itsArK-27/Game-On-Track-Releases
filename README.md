@@ -14,4 +14,4 @@ A powerful, AI-driven application designed to help you track your game battle pa
 
 ## 🚀 Live Deployment
 
-Check out the live application here: **[Insert Your Deployment Link Here]**
+Check out the live application here: **[https://game-on-track.vercel.app/](https://game-on-track.vercel.app/)**
