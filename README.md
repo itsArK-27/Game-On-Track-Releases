@@ -12,11 +12,9 @@ A powerful, AI-driven application designed to help you track your game battle pa
 *   **Progress Chart:** A beautiful, interactive line chart comparing your *Actual Progress* against the *Ideal Pace*.
 *   **Complete Privacy:** All game data, progress history, and your API key are stored locally on your computer.
 
-## 🚀 Installation Instructions
+## 🚀 Live Deployment
 
-1. Download the `battle-pass Setup 1.0.0.exe` installer from this repository.
-2. Double click the `.exe` file to run the installer.
-3. The app will install and open automatically!
+Check out the live application here: **[Insert Your Deployment Link Here]**
 
 ## 📸 Screenshots
 *(Coming soon!)*
