@@ -1,17 +1,44 @@
-# Battle Pass Tracker
+<div align="center">
+  <h1>🎮 Game On Track</h1>
+  <p><strong>A powerful, AI-driven application to help you track your game progress and finish your battle passes on time.</strong></p>
+  
+  [![Live Demo](https://img.shields.io/badge/Live_Demo-game--on--track.vercel.app-brightgreen?style=for-the-badge&logo=vercel)](https://game-on-track.vercel.app/)
+</div>
 
-A powerful, AI-driven application designed to help you track your game battle pass progress across multiple games. Ensure you stay on track to complete your battle passes before the season ends with our interactive tools, charts, and velocity calculations.
+<br />
 
-## 🌟 Features
+Welcome to the public release repository for **Game On Track**! This repository serves as a showcase for the project, providing an overview of its features, architecture, and live deployment for those interested in the application or my work.
 
-*   **Automatic AI Data Fetching:** Simply type the name of a game, and the app uses AI to automatically fetch accurate battle pass start dates, end dates, total levels, and season names.
-*   **Staleness & Expiry Warnings:** The app intelligently tracks when your data was last fetched. It will display a warning if data is stale or if the season has officially ended.
-*   **Multi-Game Tracking:** Track progress for an unlimited number of games simultaneously on a unified dashboard.
-*   **Velocity Tracking (Levels/Day):** Calculates exactly how many levels per day (L/D) you need to maintain to finish the battle pass on time.
-*   **Pace Status & Trajectory:** Instantly informs you if you are "On Track", "Behind", or "Complete".
-*   **Progress Chart:** A beautiful, interactive line chart comparing your *Actual Progress* against the *Ideal Pace*.
-*   **Complete Privacy:** All game data, progress history, and your API key are stored locally on your computer.
+> **Note**: The source code for this project is maintained in a private repository to protect the proprietary backend implementations and secure configurations. This repository contains the public facing documentation and tracking of our public releases.
 
-## 🚀 Live Deployment
+## ✨ Project Overview
 
-Check out the live application here: **[https://game-on-track.vercel.app/](https://game-on-track.vercel.app/)**
+Game On Track is a modern, responsive web application designed to solve the common problem of tracking multiple game seasons and battle passes. It intelligently calculates the required daily progress, visualizing whether a player is on track to complete their goals before the season ends.
+
+### 🌟 Key Features
+
+*   **🤖 AI-Powered Data Fetching:** Integrates with the **Groq API** (`groq/compound-mini`) to automatically fetch accurate start dates, end dates, total levels, and season names for any game.
+*   **📊 Advanced Analytics & Velocity Tracking:** Calculates the exact "Levels per Day" (L/D) required to finish a pass on time, tracks pace status (On Track, Behind, Complete), and provides dynamic trajectory predictions based on actual progress.
+*   **📈 Interactive Data Visualization:** Features beautiful, interactive line charts comparing actual progress against the required pace over time.
+*   **🔒 Secure Cloud Sync:** Implements **Firebase Auth** and **Firestore** for real-time, secure data synchronization across devices, including auto-retry and offline-aware capabilities.
+*   **🎨 Premium UI/UX:** Built with a fully responsive, modern dark-mode aesthetic utilizing Inter, Space Grotesk, and Outfit typography. Includes drag-and-drop reordering, custom glowing color pickers, and fluid micro-animations.
+
+## 🛠️ Architecture & Tech Stack
+
+This project was built with a focus on performance, security, and a premium user experience:
+
+*   **Frontend**: Vanilla HTML/JS/CSS focusing on high performance without framework overhead, utilizing modern CSS features (glassmorphism, gradients) and responsive design principles.
+*   **Backend / Serverless**: **Vercel Serverless Functions** are used to securely route AI requests, keeping API keys completely hidden from the client and handling rate limits with exponential backoff.
+*   **Database & Auth**: **Firebase (Firestore + Authentication)** for secure user management and real-time database capabilities.
+*   **AI Integration**: **Groq API** for lightning-fast inference to power the automatic data fetching feature.
+*   **Security**: Strict Content-Security-Policy (CSP), server-side input sanitization, API rate limiting, and XSS protection.
+
+## 🚀 Live Application
+
+Experience the application yourself! No account required to try out the basic features:
+
+**🔗 [game-on-track.vercel.app](https://game-on-track.vercel.app/)**
+
+---
+
+*Thank you for taking the time to check out my project! If you're a recruiter or hiring manager, I'd be happy to discuss the technical decisions, architecture, and private source code of this application in detail during an interview.*
