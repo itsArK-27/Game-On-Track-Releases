@@ -19,9 +19,10 @@ Game On Track is a modern, responsive web application designed to solve the comm
 
 *   **🤖 AI-Powered Data Fetching:** Integrates with the **Groq API** (`groq/compound-mini`) to automatically fetch accurate start dates, end dates, total levels, and season names for any game.
 *   **📊 Advanced Analytics & Velocity Tracking:** Calculates the exact "Levels per Day" (L/D) required to finish a pass on time, tracks pace status (On Track, Behind, Complete), and provides dynamic trajectory predictions based on actual progress.
+*   **♻️ Recycle Bin & Data Safety:** Deleted games are securely moved to a 30-day retention Recycle Bin, offering users peace of mind and the ability to restore accidentally removed progress.
 *   **📈 Interactive Data Visualization:** Features beautiful, interactive line charts comparing actual progress against the required pace over time.
 *   **🔒 Secure Cloud Sync:** Implements **Firebase Auth** and **Firestore** for real-time, secure data synchronization across devices, including auto-retry and offline-aware capabilities.
-*   **🎨 Premium UI/UX:** Built with a fully responsive, modern dark-mode aesthetic utilizing Inter, Space Grotesk, and Outfit typography. Includes drag-and-drop reordering, custom glowing color pickers, and fluid micro-animations.
+*   **🎨 Premium UI/UX:** Built with a fully responsive, modern dark-mode aesthetic utilizing Inter, Space Grotesk, and Outfit typography. Includes drag-and-drop reordering, custom glowing color pickers, fluid micro-animations, and a highly scalable navigation sidebar to support massive game libraries seamlessly.
 
 ## 🛠️ Architecture & Tech Stack
 
