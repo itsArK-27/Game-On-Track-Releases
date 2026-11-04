@@ -3,15 +3,15 @@
   <p><strong>A modern, AI-driven, and community-verified web application designed to track seasonal battle passes, compute daily velocity, and ensure you finish your goals on time.</strong></p>
 
   [![Live Demo](https://img.shields.io/badge/Live_Demo-game--on--track.vercel.app-00DC82?style=for-the-badge&logo=vercel&logoColor=white)](https://game-on-track.vercel.app/)
-  [![AI Engine](https://img.shields.io/badge/AI_Engine-Groq_GPT--OSS--120B-F55036?style=for-the-badge&logo=openai&logoColor=white)](https://groq.com/)
-  [![Database & Auth](https://img.shields.io/badge/Cloud_Sync-Firebase_Firestore-FFCA28?style=for-the-badge&logo=firebase&logoColor=black)](https://firebase.google.com/)
+  [![AI Engine](https://img.shields.io/badge/AI_Engine-Automated_AI_Lookup-00DC82?style=for-the-badge&logo=openai&logoColor=white)](https://game-on-track.vercel.app/)
+  [![Database & Auth](https://img.shields.io/badge/Cloud_Sync-Encrypted_Cloud_Sync-FFCA28?style=for-the-badge&logo=firebase&logoColor=black)](https://game-on-track.vercel.app/)
   [![License](https://img.shields.io/badge/License-MIT-blue?style=for-the-badge)](https://opensource.org/licenses/MIT)
 </div>
 
 <br />
 
 > [!NOTE]
-> **Public Showcase & Releases Repository:** The core application source code and backend infrastructure are maintained in a private repository (`itsArK-27/Game-On-Track`) to safeguard private credentials, serverless configurations, and proprietary AI prompts. This public repository (`Game-On-Track-Releases`) serves as the official public showcase, release tracker, and community feedback hub.
+> **Public Showcase & Releases Repository:** The core application source code and backend infrastructure are maintained in a secure private repository to safeguard serverless configurations, environment secrets, and backend validation logic. This public repository (`Game-On-Track-Releases`) serves as the official public showcase, release tracker, and community feedback hub.
 
 ---
 
@@ -46,17 +46,17 @@ Modern multiplayer titles rely heavily on seasonal battle passes (Fortnite, Valo
 ## 🌟 Comprehensive Feature List
 
 ### 🤖 AI Intelligence & Curated Season Data
-* **Curated Game Dates Database:** Built-in hand-verified database (`api/game-dates.json`) covering 13+ major titles (Fortnite, Valorant, Apex Legends, Call of Duty, BGMI, PUBG Mobile, Overwatch 2, Rocket League, Destiny 2, Genshin Impact, Diablo 4, Halo Infinite, The Finals, and more). Queries resolve instantly with zero latency, zero API costs, and complete immunity to AI hallucinations.
-* **AI-Powered Fallback with Web Search:** For unlisted or custom games, queries fall through to a Groq serverless AI backend powered by `openai/gpt-oss-120b` with `browser_search` tooling and `qwen/qwen3.8-27b` fallback, retrieving official season announcements and schedules directly from the web.
+* **Curated Game Dates Database:** Built-in verified database covering 13+ major titles (Fortnite, Valorant, Apex Legends, Call of Duty, BGMI, PUBG Mobile, Overwatch 2, Rocket League, Destiny 2, Genshin Impact, Diablo 4, Halo Infinite, The Finals, and more). Queries resolve instantly with zero latency, verified accuracy, and complete immunity to AI hallucinations.
+* **AI-Powered Schedule Lookup:** For unlisted or custom games, queries automatically fall through to a resilient serverless AI pipeline that searches official public announcements and schedule releases to retrieve verified season dates.
 * **Server-Side Date Validation:** Strict sanity checks validate date formats, reject expired seasons, block implausibly long durations (> 180 days), and clamp levels to realistic boundaries (1–500).
-* **Automated Daily Sync & Expiry Alerts:** A daily GitHub Actions automation checks season health, updates `game-dates.json` via official APIs and AI web search, and opens alert issues for seasons expiring within 3 days.
+* **Automated Daily Sync & Expiry Alerts:** A daily GitHub Actions automation checks season health, updates schedules via official APIs and verified automated lookups, and opens alert issues for seasons expiring within 3 days.
 * **Verified Data Badges:** Distinguishes between hand-curated schedules (blue `Verified Data` badge) and AI-fetched dates (`Fetched [Date]` badge).
 * **Staleness & Expiry Warnings:** Intelligently alerts you when season data is older than 3 days or when a season has officially concluded, prompting a one-click refresh.
 
 ### 👥 Community Verification & Feedback System
 * **Interactive Accuracy Checks:** An automated feedback prompt appears when loading a game's detail view for the first time or after dates are updated, asking users to confirm accuracy.
 * **Crowdsourced Date Suggestions:** Disputing dates opens an embedded calendar form allowing players to submit suggested start and end dates directly to the community database.
-* **Trust-Weighted Consensus:** Submissions are stored in Cloud Firestore and weighted by user trust scores, dynamically classifying season schedules as **Confirmed** (≥70% accuracy), **Disputed** (≥60% inaccurate), or **Pending**.
+* **Trust-Weighted Consensus:** Submissions are weighted through a consensus scoring model that verifies accuracy, flags disputed schedules, and protects community data against coordinated manipulation.
 
 ### 📊 Advanced Tracking, Goals & Velocity
 * **Multi-Game & Custom Goal Tracking:** Track an unlimited library of games simultaneously or define custom non-game goals, seasonal milestones, and personal challenge tracks using the **"Other (Custom Game / Goal)"** mode.
@@ -84,11 +84,11 @@ Modern multiplayer titles rely heavily on seasonal battle passes (Fortnite, Valo
 * **Terminology Tooltips:** Helpful hover tooltips explain domain jargon (velocity, expected level, pace trajectory) for new users.
 
 ### 🔒 Security, Resilience & Cloud Sync
-* **Offline-First & Local Obfuscation:** Fully functional without an account or internet connection. Game progress is saved to `localStorage` with Base64 obfuscation and strict import schema validation.
-* **Real-Time Cloud Sync via Firebase:** Sign in with Google to sync your game library and history across all your devices using Firebase Auth and Cloud Firestore.
+* **Offline-First Architecture:** Fully functional without an account or internet connection. Game progress is saved locally and privately in browser storage with strict import schema validation.
+* **Real-Time Cloud Sync:** Sign in with Google to securely sync your game library and history across all your devices using encrypted cloud synchronization.
 * **Sync Manager & Auto-Retry:** Features a real-time status indicator (Idle, Syncing, Synced, Error), actionable error toasts with instant "Retry", automatic background retry on transient errors, and an 8-second timeout guard to prevent app freezes.
-* **Exit Guard (`beforeunload`):** Warns you if you attempt to close or navigate away from the page while changes are pending cloud save.
-* **Secure Backend Proxy:** Groq AI and Feedback endpoints run in serverless Vercel functions, keeping all API keys and service credentials strictly hidden from client bundles.
+* **Exit Guard:** Warns you if you attempt to close or navigate away from the page while changes are pending cloud save.
+* **Secure Backend Proxy:** AI and feedback services run in serverless proxy functions, keeping all API keys and service credentials strictly hidden from client bundles.
 
 ---
 
@@ -99,30 +99,30 @@ graph TD
     Client["Client Browser (PWA/SPA)<br/>Vanilla ES Modules + Vite 8 + Chart.js 4 + Litepicker"]
     
     subgraph Storage & Sync
-        LS["Local Storage (Offline-First / Obfuscated)"]
-        FBA["Firebase Authentication (Google OAuth)"]
-        FS["Cloud Firestore (Real-Time Cloud Sync)"]
+        LS["Local Storage (Offline-First / Private)"]
+        Auth["Google Identity / OAuth"]
+        Cloud["Encrypted Cloud Database"]
     end
     
-    subgraph Serverless Backend (Vercel Node.js)
-        Proxy["Proxy Endpoint /api/groq"]
-        Feedback["Feedback Endpoint /api/feedback"]
-        Curated["Curated Dataset (api/game-dates.json)"]
+    subgraph Serverless Backend
+        Proxy["Secure AI Proxy Endpoint"]
+        Feedback["Feedback & Consensus Endpoint"]
+        Curated["Curated Verified Dataset"]
     end
     
     subgraph External Services & Automation
-        Groq["Groq Cloud API<br/>(gpt-oss-120b + search / qwen3.8-27b)"]
+        AI["AI Schedule Verification Service"]
         GHA["GitHub Actions CI/CD<br/>(Daily Season Sync & Expiry Alerts)"]
     end
 
     Client <--> LS
-    Client <--> FBA
-    Client <--> FS
+    Client <--> Auth
+    Client <--> Cloud
     Client -->|Zero Latency Cached Lookup| Curated
     Client -->|Fallback Request| Proxy
     Client -->|Submit Date Dispute| Feedback
-    Feedback --> FS
-    Proxy --> Groq
+    Feedback --> Cloud
+    Proxy --> AI
     GHA -->|Update Schedules| Curated
 ```
 
@@ -132,9 +132,9 @@ graph TD
 | **Styling & Design System** | Modern CSS3 Design Tokens, Custom Glassmorphism, Responsive Grid / Flexbox |
 | **Data Visualization** | Chart.js 4, `chartjs-adapter-date-fns`, `date-fns` v4 |
 | **Calendar & Pickers** | Litepicker (Dark Themed), Dual-Canvas Hex/Hue/SV Color Picker |
-| **Backend / Serverless** | Vercel Serverless Functions (Node.js), Firebase Admin SDK v14, Express & CORS |
-| **AI & Web Search** | Groq API (`openai/gpt-oss-120b` with `browser_search` tooling, `qwen/qwen3.8-27b` fallback) |
-| **Database & Identity** | Google Firebase Authentication & Cloud Firestore |
+| **Backend / Serverless** | Vercel Serverless Functions (Node.js), Secure Token Verification, CORS Controls |
+| **AI & Web Search** | Resilient Serverless AI Pipeline (Multi-model fallback & web discovery) |
+| **Database & Identity** | Google Authentication & Encrypted Cloud Storage |
 | **CI/CD & Automation** | GitHub Actions (Daily season date validation, expiry alerts, Node.js 24) |
 
 ---
@@ -145,7 +145,7 @@ graph TD
 * **Subresource Integrity (SRI):** Pinned CDN versions and cryptographic SRI hashing.
 * **Event Delegation:** Architecture uses declarative `data-action` delegation, eliminating risky eval patterns and dynamic event injections.
 * **Server-Side Input Sanitization:** Robust regex validation and prompt injection defenses before forwarding queries to LLMs.
-* **Sliding-Window Rate Limiting:** Enforces serverless per-IP rate limits to prevent API abuse or denial-of-wallet vectors.
+* **Sliding-Window Rate Limiting:** Enforces server-side rate limits to protect APIs from abuse and denial-of-wallet vectors.
 * **HTTP Hardening Headers:** Strict-Transport-Security (HSTS), `X-Frame-Options: DENY`, `X-Content-Type-Options: nosniff`, and `Referrer-Policy: strict-origin-when-cross-origin`.
 
 ---
@@ -157,7 +157,7 @@ You can explore the live application immediately. No account or setup is require
 👉 **[Launch Game On Track](https://game-on-track.vercel.app/)**
 
 * **Guest Mode:** All data stays locally stored in your browser's persistent storage.
-* **Google Sign-In:** Enable real-time cross-device cloud synchronization via Cloud Firestore.
+* **Google Sign-In:** Enable real-time cross-device cloud synchronization.
 
 ---
 
