@@ -10,6 +10,10 @@
 
 <br />
 
+<p align="center">
+  <img src="assets/screenshots/01-dashboard-overview.png" alt="Game On Track Dashboard Overview" width="100%" />
+</p>
+
 > [!NOTE]
 > **Public Showcase & Releases Repository:** The core application source code and backend infrastructure are maintained in a secure private repository to safeguard serverless configurations, environment secrets, and backend validation logic. This public repository (`Game-On-Track-Releases`) serves as the official public showcase, release tracker, and community feedback hub.
 
@@ -73,6 +77,10 @@ Modern multiplayer titles rely heavily on seasonal battle passes (Fortnite, Valo
 * **Progress Chart:** Interactive line chart (powered by Chart.js 4 and date-fns) comparing your **Actual Progress** against the **Ideal Pace** and the **Required Pace** needed to finish on time, cleanly starting from your custom starting position.
 * **Velocity Chart:** Visualizes your historical daily leveling velocity plotted against the required target velocity baseline.
 
+<p align="center">
+  <img src="assets/screenshots/02-game-detail-analytics.png" alt="Game Detail & Interactive Trajectory Charts" width="100%" />
+</p>
+
 ### 🎨 Mobile-First UI, Gestures & Drag-and-Drop
 * **Mobile-First Responsive Interface:** Complete with a dedicated mobile header, safe-area insets (`viewport-fit=cover`), touch-friendly targets, and a quick-add `+` button.
 * **Desktop & Touch Drag-and-Drop Reordering:** Freely reorder games on both desktop (mouse drag) and mobile devices (long-press touch drag with floating preview and drop guides).
@@ -82,6 +90,11 @@ Modern multiplayer titles rely heavily on seasonal battle passes (Fortnite, Valo
 * **Advanced Sorting:** Sort your library alphabetically, by season start date, season end date, levels/day urgency, or your custom drag-and-drop order.
 * **Custom Game Colors:** Personalize each game card with preset glowing palettes or pick any color using the dual-canvas Hex/Hue/SV color picker.
 * **Terminology Tooltips:** Helpful hover tooltips explain domain jargon (velocity, expected level, pace trajectory) for new users.
+
+<p align="center">
+  <img src="assets/screenshots/03-add-game-modal.png" alt="Add Game Modal with Curated Presets" width="49%" />
+  <img src="assets/screenshots/04-mobile-responsive.png" alt="Mobile Responsive Experience" width="49%" />
+</p>
 
 ### 🔒 Security, Resilience & Cloud Sync
 * **Offline-First Architecture:** Fully functional without an account or internet connection. Game progress is saved locally and privately in browser storage with strict import schema validation.
