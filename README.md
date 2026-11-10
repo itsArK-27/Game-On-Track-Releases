@@ -92,8 +92,7 @@ Modern multiplayer titles rely heavily on seasonal battle passes (Fortnite, Valo
 * **Terminology Tooltips:** Helpful hover tooltips explain domain jargon (velocity, expected level, pace trajectory) for new users.
 
 <p align="center">
-  <img src="assets/screenshots/03-add-game-modal.png" alt="Add Game Modal with Curated Presets" width="49%" />
-  <img src="assets/screenshots/04-mobile-responsive.png" alt="Mobile Responsive Experience" width="49%" />
+  <img src="assets/screenshots/04-mobile-responsive.png" alt="Mobile Responsive Experience" width="320" />
 </p>
 
 ### 🔒 Security, Resilience & Cloud Sync
